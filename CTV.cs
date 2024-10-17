@@ -140,28 +140,12 @@ namespace Just_a_random_for_a_song
                 // sleep one second
                 if (watch.ElapsedMilliseconds < lines[linesIndex].Item3)
                 {
-                    if (index < tv.Count)
-                    {
-                        DisplayOnBothLines(lines[linesIndex].Item1, lines[linesIndex].Item2, index);
-                    }
-                    else
-                    {
-                        index = 0;
-                        DisplayOnBothLines(lines[linesIndex].Item1, lines[linesIndex].Item2, index);
-                    }
+                    DisplayLines(lines, index, linesIndex);
                     index++;
                 } // only display and increment if the time elapsed
                 else
                 {
-                    if (index < tv.Count)
-                    {
-                        DisplayOnBothLines(lines[linesIndex].Item1, lines[linesIndex].Item2, index);
-                    }
-                    else
-                    {
-                        index = 0;
-                        DisplayOnBothLines(lines[linesIndex].Item1, lines[linesIndex].Item2, index);
-                    }
+                    DisplayLines(lines, index, linesIndex);
                     watch.Stop();
                     watch.Reset();
                     linesIndex++;
@@ -171,6 +155,18 @@ namespace Just_a_random_for_a_song
             } /// animate forever
             Console.CursorVisible = true;
         } // will play with the message 
+        private void DisplayLines(List<Tuple<string, string, int>> lines, int index, int linesIndex) 
+        {
+            if (index < tv.Count)
+            {
+                DisplayOnBothLines(lines[linesIndex].Item1, lines[linesIndex].Item2, index);
+            }
+            else
+            {
+                index = 0;
+                DisplayOnBothLines(lines[linesIndex].Item1, lines[linesIndex].Item2, index);
+            }
+        }// helper method for the multiple lines method
 
 
         // will simply set display time
