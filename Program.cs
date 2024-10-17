@@ -21,7 +21,7 @@ namespace Just_a_random_for_a_song
             TV tv = new TV();
 
             // Display the title
-            tv.Play("Adventure", "Time", 3);
+            tv.Play("Adventure", "Time", 4000);
 
             player.Play("Music/Island Song (Come Along with Me) (feat. Ashley Eriksson).mp3");
             tv.SetDelayTime(150);
