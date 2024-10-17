@@ -128,6 +128,7 @@ namespace Just_a_random_for_a_song
         /// <param name="lines">Provide a lit of tuples with the line and length to play in miliseconds</param>
         public void Play(List<Tuple<string, string, int>> lines) 
         {
+            Console.CursorVisible = false; // make cursor temporary hidden
             int index = 0;
             int linesIndex = 0;
             while (linesIndex < lines.Count)
@@ -164,8 +165,9 @@ namespace Just_a_random_for_a_song
                     linesIndex++;
                     index++;
                 }  
-                Thread.Sleep(Delay);
+                Thread.Sleep(Delay); // make cursor visible
             } /// animate forever
+            Console.CursorVisible = true;
         } // will play with the message 
 
 
@@ -217,7 +219,7 @@ namespace Just_a_random_for_a_song
             {
                 if (line != "===")
                 {
-                    text += "\n" + line;
+                    text += "\t\t\t\t" + line + "\n";
                 }// then add line
                 else
                 {

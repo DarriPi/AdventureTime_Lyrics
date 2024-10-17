@@ -50,7 +50,6 @@ namespace Just_a_random_for_a_song
         //    } // read lines
         //    return result;
         //}
-
         private static List<Tuple<string, string, int>> MakeLines() 
         {
             List<Tuple<string, string, int>> result = new List<Tuple<string, string, int>>();
