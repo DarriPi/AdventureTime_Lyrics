@@ -15,8 +15,6 @@ namespace Just_a_random_for_a_song
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            string path = "Text_Art\\Tv_Static\\Static_Slide_1.txt";
-
 
             // make tv and play
             MusicPlayer player = new MusicPlayer();
