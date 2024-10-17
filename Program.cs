@@ -18,7 +18,9 @@ namespace Just_a_random_for_a_song
             string title = File.ReadAllText(@"C:\Users\daria\projects\AdventureTime_Lyrics_App\bin\Debug\Text_Art\Title\Adventure_Time.txt");
 
 
-            Console.WriteLine(title);
+            Console.WriteLine("\n" + title);
+            Console.WriteLine("\nPress any key to continue....");
+
             Console.ReadKey();
             
             // make tv and play
@@ -26,7 +28,7 @@ namespace Just_a_random_for_a_song
             TV tv = new TV();
 
             // Display the title
-            tv.Play("Island", "Song", 4000);
+            tv.Play("Island", "Song", 2500);
 
             player.Play("Music/Island Song (Come Along with Me) (feat. Ashley Eriksson).mp3");
             tv.SetDelayTime(150);
