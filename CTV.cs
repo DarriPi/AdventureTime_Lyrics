@@ -140,26 +140,25 @@ namespace Just_a_random_for_a_song
                 // sleep one second
                 if (watch.ElapsedMilliseconds < lines[linesIndex].Item3)
                 {
-                    DisplayLines(lines, index, linesIndex);
-                    index++;
+                    DisplayLines(lines, ref index, linesIndex);
                 } // only display and increment if the time elapsed
                 else
                 {
-                    DisplayLines(lines, index, linesIndex);
+                    DisplayLines(lines, ref index, linesIndex);
                     watch.Stop();
                     watch.Reset();
                     linesIndex++;
-                    index++;
                 }  // increment the linesIndex as while
                 Thread.Sleep(Delay); // make cursor visible
             } /// animate forever
             Console.CursorVisible = true;
         } // will play with the message 
-        private void DisplayLines(List<Tuple<string, string, int>> lines, int index, int linesIndex) 
+        private void DisplayLines(List<Tuple<string, string, int>> lines, ref int index, int linesIndex) 
         {
             if (index < tv.Count)
             {
                 DisplayOnBothLines(lines[linesIndex].Item1, lines[linesIndex].Item2, index);
+                index++;
             }
             else
             {
