@@ -15,13 +15,18 @@ namespace Just_a_random_for_a_song
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
+            string title = File.ReadAllText(@"C:\Users\daria\projects\AdventureTime_Lyrics_App\bin\Debug\Text_Art\Title\Adventure_Time.txt");
 
+
+            Console.WriteLine(title);
+            Console.ReadKey();
+            
             // make tv and play
             MusicPlayer player = new MusicPlayer();
             TV tv = new TV();
 
             // Display the title
-            tv.Play("Adventure", "Time", 4000);
+            tv.Play("Island", "Song", 4000);
 
             player.Play("Music/Island Song (Come Along with Me) (feat. Ashley Eriksson).mp3");
             tv.SetDelayTime(150);
