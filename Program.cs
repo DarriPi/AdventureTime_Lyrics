@@ -23,12 +23,15 @@ namespace Just_a_random_for_a_song
             TV tv = new TV();
 
             // Display the title
-            //tv.Play("Adventure", "Time", 2);
+            tv.Play("Adventure", "Time", 3);
 
             player.Play("Music/Island Song (Come Along with Me) (feat. Ashley Eriksson).mp3");
             tv.SetDelayTime(150);
             tv.Play(MakeLines());
             player.Stop();
+
+
+            Console.WriteLine("Press any key to close...");
             Console.ReadKey();
         }
         //static List<string> ReadTextScenes(string path) 
@@ -93,8 +96,5 @@ namespace Just_a_random_for_a_song
 
             return result;
         } // will add the lines of the song I wish to play
-        private void RepeatChorus() 
-        {
-        }
     }
 }
