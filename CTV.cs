@@ -221,7 +221,7 @@ namespace Just_a_random_for_a_song
             {
                 if (line != "===")
                 {
-                    text += "\t\t\t\t" + line + "\n";
+                    text += "\t\t\t\t\t" + line + "\n";
                 }// then add line
                 else
                 {
