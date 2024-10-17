@@ -89,6 +89,7 @@ namespace Just_a_random_for_a_song
         // play for two lines
         public void Play(string line1, string line2, int time) 
         {
+            Console.CursorVisible = false;
             int index = 0;
 
             watch.Start();
@@ -110,6 +111,7 @@ namespace Just_a_random_for_a_song
             } /// animate forever
             watch.Stop();
             watch.Reset();
+            Console.CursorVisible = true;
         } // write on both lines
         private void DisplayOnBothLines(string msg1, string msg2, int index) 
         {
@@ -164,7 +166,7 @@ namespace Just_a_random_for_a_song
                     watch.Reset();
                     linesIndex++;
                     index++;
-                }  
+                }  // increment the linesIndex as while
                 Thread.Sleep(Delay); // make cursor visible
             } /// animate forever
             Console.CursorVisible = true;
